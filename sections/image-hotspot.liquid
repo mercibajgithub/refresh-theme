@@ -1,0 +1,230 @@
+<style>
+  .image-hotspot-wrapper {
+    position: relative;
+     border-top: 1px solid rgb(221 215 210);
+        padding-bottom: 40px !important;
+  }
+
+  .image-hotspot-wrapper__inner {
+    max-width: 1020px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+        align-items: center;
+  }
+
+  .image-hotspot__image-wrapper {
+    width: 60%;
+    text-align: center;
+    position: relative;
+  }
+
+  .image-hotspot__image-wrapper img {
+    max-width: 550px;
+    height: auto;
+    position: relative;
+    display: block;
+    margin: auto;
+  }
+
+  .image-hotspot__prod-slider-wrapper {
+    width: 40%;
+    text-align: center;
+  }
+
+  .image-hotspot__prod-slider .swiper-wrapper {
+    overflow: unset;
+  }
+
+  .image-hotspot__prod-slider img {
+    max-width: 270px;
+    max-height: 315px;
+  }
+
+  .trigger {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    background: rgb(255 255 255);
+    color: #eee6f0;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0 0 0 0 rgba(255 255 255);
+    transition: box-shadow 0.4s, transform 0.2s;
+    box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    user-select: none;
+    animation: button-pulse 2s ease-in-out infinite; 
+  }
+
+  .trigger:hover {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.5);
+    transform: scale(1.2);
+   
+  }
+
+  @keyframes button-pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+      transform: scale(1.2);
+      box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  .trigger:nth-child(1) {
+     top: 51%;
+    left: 15%;
+  }
+
+  .trigger:nth-child(2) {
+     top: 19%;
+    left: 48%;
+  }
+
+  .trigger:nth-child(3) {
+     top: 91%;
+    left: 53%;
+  }
+
+  .sr__only {
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+    width: 10px;
+    margin: -1px;
+    padding: 0;
+    position: absolute;
+    overflow: hidden;
+  }
+  .image-hotspot__product-price{
+padding-bottom: 40px;
+  }
+.imagr__hotspot-btn{
+  padding-left:10px;
+}
+
+</style>
+
+
+
+
+<div class="image-hotspot-wrapper color-{{ section.settings.color_scheme }}">
+  <h2></h2>
+  <div class="image-hotspot-wrapper__inner">
+    <div class="image-hotspot__image-wrapper">
+      <div class="trigger" id="image-hotspot__necklace"><span class="sr__only"></span></div>
+      <div class="trigger" id="image-hotspot__earring"><span class="sr__only"></span></div>
+      <div class="trigger" id="image-hotspot__lipstick"><span class="sr__only"></span></div>
+      <img src="https://pachaiyappas.in/pub/media/wysiwyg/smartwave/images/bridal_tile.jpg">
+    </div>
+    <div class="image-hotspot__prod-slider-wrapper">
+      <div class="swiper image-hotspot__prod-slider">
+        <div class="swiper-wrapper">
+          {% for product in collections['image-hotspots'].products %}
+            <div class="swiper-slide">
+              <img
+                src="{{ product.featured_image | image_url }}"
+                alt="{{ product.title }}"
+              >
+              <div class="image-hotspot__product-title">{{ product.title }}</div>
+              <div class="image-hotspot__product-price">{{ product.price | money }}</div>
+                <div class="imagr__hotspot-btn">
+    <a href="{{ product.url }}" class="button button--brown button--primary double-img-with-txt__button--1">
+                  <span>{{ section.settings.button_label }}</span>
+                </a>
+   </div>
+            </div>
+          {% endfor %}
+            <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image hotspot",
+  "class": "image-hotspot",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "scheme-3",
+      "label": "Color Scheme"
+    },
+     {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "VIEW PRODUCT"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL",
+      "default": "/"
+    }
+    
+  ],
+  "presets": [
+    {
+      "name": "Image hotspot"
+    }
+  ]
+}
+{% endschema %}
+
+{% javascript %}
+  document.addEventListener('DOMContentLoaded', function() {
+    const image_hotspot_swiper = new Swiper('.swiper.image-hotspot__prod-slider', {
+      direction: 'horizontal',
+      loop: true,
+      speed: 1000,
+      spaceBetween: 25,
+      slidesPerView: 1,
+      autoplay: false,
+      allowTouchMove: false,
+      effect: "fade", 
+      fadeEffect: {
+        crossFade: true
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true, 
+      },
+    });
+
+    var image_hotspot__necklace_btn = document.getElementById('image-hotspot__necklace');
+    var image_hotspot__earring_btn = document.getElementById('image-hotspot__earring');
+    var image_hotspot__lipstick_btn = document.getElementById('image-hotspot__lipstick');
+
+    image_hotspot__necklace_btn.addEventListener('click', function() {
+      image_hotspot_swiper.slideTo(0, 1500);
+    });
+
+    image_hotspot__earring_btn.addEventListener('click', function() {
+      image_hotspot_swiper.slideTo(1, 1500);
+    });
+
+    image_hotspot__lipstick_btn.addEventListener('click', function() {
+      image_hotspot_swiper.slideTo(2, 1500);
+    });
+  });
+{% endjavascript %}
+

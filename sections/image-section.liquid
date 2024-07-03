@@ -1,0 +1,123 @@
+
+{%- style -%}
+  .collection-grid{
+    border-bottom: 1px solid #DDD7D2;
+  }
+  .collection-grid-inner{
+    max-width: 1170px;
+    margin: 0px auto;
+    padding: 30px 0px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+    align-items: center;
+  }
+  .collection-grid__title{
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    padding-bottom: 30px;
+  }
+  .collection-grid__collection{
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: end;
+    display: flex;
+  }
+  .collection-grid__collection:nth-child(1){
+    min-height: 610px;
+    grid-area: 1 / 1 / 3 / 9;
+  }
+  .collection-grid__collection:nth-child(2) {
+    min-height: 290px;
+    grid-column: 9/13;
+    grid-row: 1/2;
+  }
+  .collection-grid__collection:nth-child(3) {
+    min-height: 290px;
+    grid-column: 9/13;
+    grid-row: 2/3;
+  }
+  @media screen and (max-width: 800px) {
+  .collection-grid-inner {
+    margin-inline: 15px !important;
+    
+  }
+}
+{%- endstyle -%}
+
+<div class="collection-grid-wrapper color-{{ section.settings.color_scheme }}">
+  <div class="collection-grid-inner">
+    {% assign block_limit = 3 %}
+    {% assign block_count = 0 %}
+
+    {% for block in section.blocks %}
+      {% if block_count < block_limit %}
+        <div
+          class="collection-grid__collection"
+          style="background-image: url('{{ block.settings.collection_img | image_url }}');"
+        >
+          <a href="{{ block.settings.collection_link }}" target="_blank" class="collection-grid__title">
+            <p>
+              <em>
+                {{ block.settings.collection_title }}
+              </em>
+            </p>
+          </a>
+        </div>
+        {% assign block_count = block_count | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Collection grid",
+  "class": "collection-grid",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "scheme-2",
+      "label": "Color Scheme"
+    }
+  ],
+  "blocks": [
+     {
+       "name": "Collection",
+       "type": "collection",
+       "settings": [
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+          },
+          {
+            "type": "image_picker",
+            "id": "collection_img",
+            "label": "Collection Image"
+          },
+          {
+            "type": "text",
+            "id": "collection_title",
+            "label": "Collection Title"
+          },
+          {
+            "type": "url",
+            "id": "collection_link",
+            "label": "Collection Link"
+          }
+       ]
+     }
+  ],
+  "presets": [
+    {
+      "name": "Collection Grid",
+      "category": "collection-grid"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,96 @@
+
+{% comment %}
+  This is the schema for the Section Collage section.
+{% endcomment %}
+
+{% schema %}
+{
+  "name": "collage product",
+  "settings": [],
+  "presets": [
+    {
+      "name": "collage product",
+      "category": "Product grid"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{% comment %}
+  This is the HTML/CSS/JS code for the Section Collage section.
+{% endcomment %}
+
+<div class="section-collage">
+  <div class="left-section">
+    <img src="{{ section.settings.image | img_url: 'master' }}" alt="Image">
+    <div class="button-container">
+      {% for block in section.blocks %}
+        <button>{{ block.settings.button_text }}</button>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="right-section">
+    <div id="product1" class="product"></div>
+    <div id="product2" class="product"></div>
+    <div id="product3" class="product"></div>
+  </div>
+  <div class="doubt-slider">
+    <!-- Doubt slider content here -->
+  </div>
+  <a href="#" class="link-button">Learn More</a>
+</div>
+
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const testimonials_image_swiper = new Swiper('.swiper.testimonials__text-slider-wrapper', {
+                direction: 'vertical',
+                loop: true,
+                speed: 1000,
+                centeredSlides: true,
+                autoplay: false,
+                allowTouchMove: false,
+                pagination: false
+            });
+
+            testimonials_image_swiper.slideTo(0, 1500);
+
+            var testimonials_button = document.getElementsByClassName('testimonials__image-button');
+
+            for (var i = 0; i < testimonials_button.length; i++) {
+                testimonials_button[i].addEventListener('click', function(event) {
+                    sliderIndex = Number(event.target.id) - 1;
+                    testimonials_image_swiper.slideTo(sliderIndex, 1500);
+                });
+            }
+        });
+  
+</script>

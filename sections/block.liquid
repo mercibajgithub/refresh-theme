@@ -1,0 +1,120 @@
+
+{{ 'block-text.css' | asset_url |stylesheet_tag }}
+  
+  
+  <div class="blockj-container">
+     {% for block in section.blocks %}
+       <div class="block_content--one">
+         <div>
+         <img src="https://cdn.shopify.com/s/files/1/0580/5188/7203/files/cash.png?v=1716389996" />
+</div>
+      <div class="block_content--heading">{{ block.settings.main__heading }}</div>
+         <p>{{ block.settings.des__content }}</p>
+       </div>
+
+       <div class="block_content--twoj">
+         <div>
+           <img src="https://cdn.shopify.com/s/files/1/0580/5188/7203/files/delivery.png?v=1716390011"/>
+          </div>
+       <div class="block_content--heading">{{ block.settings.heading__two }}</div>
+         <p>{{ block.settings.descrip__two }}</p>
+       </div>
+
+
+       <div class="block_content--threejj">
+         <div>
+           <img src="https://cdn.shopify.com/s/files/1/0580/5188/7203/files/india.png?v=1716390029"/>
+           </div>
+        <div class="block_content--heading">{{ block.settings.headin__three  }}</div>
+         <p>{{ block.settings.descr__three }}</p>
+       </div>
+
+       <div class="block_content--fourjjj">
+         <div>
+           <img src="https://cdn.shopify.com/s/files/1/0580/5188/7203/files/shipping.png?v=1716390044"/>
+         </div>
+        <div class="block_content--heading">{{ block.settings.heading__four }}</div>
+         <p>{{ block.settings.descript__four }}</p>
+       </div>
+      {% endfor %}
+  </div>
+
+{% schema %}
+{
+  "name": "block text",
+  "settings": [    {
+      "type": "image_picker",
+      "id": "image_onr",
+      "label": "Image one"
+    }
+  ],
+  "presets": [
+    {
+      "name": "block text",
+      "category": "Page"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "block Information",
+      "settings": [
+        {
+          "type": "text",
+          "id":"heading",
+          "label":"Heading",
+          "default":"block text"
+        },
+        {
+          "type":"text",
+          "id":"main__heading",
+          "label":"main heading",
+          "default":"main"
+        },
+        {
+          "type":"text",
+          "id":"des__content",
+          "label":"des content",
+          "default":"blog"
+        },
+         {
+          "type":"text",
+          "id":"heading__two",
+          "label":"heading two",
+          "default":"sub"
+        },
+         {
+          "type":"text",
+          "id":"descrip__two",
+          "label":"descrip two",
+          "default":"content"
+        },
+         {
+          "type":"text",
+          "id":"headin__three",
+          "label":"headin three",
+          "default":"text"
+        },
+         {
+          "type":"text",
+          "id":"descr__three",
+          "label":"descr three",
+          "default":"contact"
+        },
+         {
+          "type":"text",
+          "id":"heading__four",
+          "label":"heading four",
+          "default":"home"
+        },
+                 {
+          "type":"text",
+          "id":"descript__four",
+          "label":"descript four",
+          "default":"what"
+        }
+      ]
+        }
+      ]
+}
+{% endschema %}

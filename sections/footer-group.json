@@ -1,0 +1,68 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "brand_information_KQHyGk": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true
+          }
+        },
+        "link_list_mCRrXX": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Abouts Us",
+            "menu": "footer"
+          }
+        },
+        "link_list_b9UmTJ": {
+          "type": "link_list",
+          "settings": {
+            "heading": "<strong>Know Your Saree<\/strong>",
+            "menu": "footer-second-menu"
+          }
+        },
+        "image_4F7qdy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/191795157-beautiful-indian-woman-wearing-colorful-traditional-saree-and-jewels-happy-young-girl-in-bright-removebg-preview.png",
+            "image_width": 550,
+            "alignment": "right"
+          }
+        }
+      },
+      "block_order": [
+        "brand_information_KQHyGk",
+        "link_list_mCRrXX",
+        "link_list_b9UmTJ",
+        "image_4F7qdy"
+      ],
+      "custom_css": [
+        ". j-list-menu {text-align:center;}",
+        "@media (max-width: 990px) {. j-list-menu {text-align: center !important; }}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-3",
+        "newsletter_enable": false,
+        "newsletter_heading": "",
+        "enable_follow_on_shop": true,
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": true,
+        "payment_enable": true,
+        "show_policy": true,
+        "margin_top": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "button_label": "SUBSCRIBE",
+        "button_url": "\/"
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

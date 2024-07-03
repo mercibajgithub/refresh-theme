@@ -1,0 +1,86 @@
+
+<style>
+  .grid-wrapper {
+    --auto-grid-min-size: 16rem;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .grid-wrapper li {
+  
+    color: #ffffff;
+    font-size: 24px;
+    list-style-type: none;
+    padding: 0.3rem 0.1rem;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 600;
+  }
+  .grid-wrapper li img{
+    width:700px;
+  
+    padding:0.2rem;
+    
+  }
+  
+  .main-container {
+    margin: 0 auto;
+    max-width: 1170px;
+    padding: 2rem 1rem;
+  }
+</style>
+
+<div class="main-container">
+  <ul class="grid-wrapper">
+    {% for product in collections.frontpage.products %}
+      <li>
+        <a href="{{ product.url }}">
+          <img src="{{ product.featured_image | img_url: '600x' }}" alt="{{ product.title }}">
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% schema %}
+{
+  "name": "Frontpage Products",
+  "settings": [],
+  "presets": [{
+      "name": "footercollection"}],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Frontpage Products",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "frontpage_products",
+          "label": "Frontpage Products"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {% for product in collections.frontpage.products %}
+    {
+      "@type": "ListItem",
+      "position": {{ forloop.index }},
+      "url": "{{ product.url }}"
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>

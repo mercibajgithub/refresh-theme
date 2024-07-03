@@ -1,0 +1,23 @@
+.blockj-container{
+  display:grid;
+  grid-template-columns:200px 200px 200px 200px;
+  gap:15px;
+  justify-content:center;
+  align-items:center;
+  padding-bottom:40px;
+  padding-top:40px;
+  border-bottom:1px solid rgb(221 215 210);
+  border-top:1px solid rgb(221 215 210);
+  
+.block_content--heading{
+  font-size:18px;
+  font-weight:600px;
+  color:#1C1C1C;
+  padding-top:25px;
+}
+
+img{
+  width:100px;
+  height:80px;
+}  
+}

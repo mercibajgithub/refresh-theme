@@ -1,0 +1,447 @@
+{
+  "sections": {
+    "silder_banner_image_7G4jGz": {
+      "type": "silder-banner-image",
+      "blocks": {
+        "slide_fGdj73": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/360_F_601446365_HV6LbdPZKl9GYCI7dAhyUv49JWfkMDQw.jpg",
+            "rahulcolor": "#fff8f2",
+            "desc-color": "#fff8f2",
+            "box-bg-color": "",
+            "slide-text": "TimeLess                                         &                                                                     Classic",
+            "desc": "",
+            "slide-heading-font-size": 32,
+            "slide-font-weight": "bold",
+            "desc-size": 31
+          }
+        },
+        "slide_RJYkH6": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/21_800x_fb8cf3c1-e921-419c-b01a-22bdab956e6e.webp",
+            "rahulcolor": "#fff8f2",
+            "desc-color": "#fff8f2",
+            "box-bg-color": "",
+            "slide-text": "Beautifully   Sarees",
+            "desc": "",
+            "slide-heading-font-size": 27,
+            "slide-font-weight": "bold",
+            "desc-size": 15
+          }
+        }
+      },
+      "block_order": [
+        "slide_fGdj73",
+        "slide_RJYkH6"
+      ],
+      "custom_css": [
+        "h3 {font-style: italic; color: rgb(221 215 210) !important;}",
+        ".botton__right--head {bottom: 6rem; width: 125px;}"
+      ],
+      "settings": {
+        "heading": "",
+        "heading-font-color": "",
+        "main-bg-color": "",
+        "heading-font-size": 20,
+        "weight": "normal"
+      }
+    },
+    "collection_tab_section_Fe66wp": {
+      "type": "collection-tab-section",
+      "settings": {
+        "color_scheme": "",
+        "collection_tab_sec_heading": "",
+        "collection_1": "weddiing-saree",
+        "collection_1_button_text": "",
+        "collection_1_link": "",
+        "collection_2": "summer-saree",
+        "collection_2_button_text": "SHOP ALL",
+        "collection_2_link": "shopify:\/\/collections\/all"
+      }
+    },
+    "image_section_KDVc3B": {
+      "type": "image-section",
+      "blocks": {
+        "collection_kijjDH": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_img": "shopify:\/\/shop_images\/An_1500x1500_39.webp",
+            "collection_title": "saree",
+            "collection_link": "shopify:\/\/collections\/sarees"
+          }
+        },
+        "collection_HJxDHc": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_img": "shopify:\/\/shop_images\/3_23b9a2fc-6f12-45ee-b688-71c961c9b969.webp",
+            "collection_title": "saree",
+            "collection_link": "shopify:\/\/collections\/sarees-1"
+          }
+        },
+        "collection_V6WAek": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "collection_img": "shopify:\/\/shop_images\/white_saree_with_red_border.jpg",
+            "collection_title": "Wedding Saree Collection",
+            "collection_link": "shopify:\/\/collections\/wedding-saree-collection"
+          }
+        }
+      },
+      "block_order": [
+        "collection_kijjDH",
+        "collection_HJxDHc",
+        "collection_V6WAek"
+      ],
+      "settings": {
+        "color_scheme": ""
+      }
+    },
+    "silder_collection_pro_xEXy4i": {
+      "type": "silder-collection-pro",
+      "settings": {
+        "title": "Featured collection",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "frontpage",
+        "products_to_show": 4,
+        "columns_desktop": 6,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "button_label": "SHOP ALL",
+        "button_url": "\/"
+      }
+    },
+    "image_banner_UDUbwe": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_KfRGtq": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em><strong>Latest In Store<\/strong><\/em>",
+            "heading_size": "h1"
+          }
+        },
+        "text_k6hQPR": {
+          "type": "text",
+          "settings": {
+            "text": "New Arrivals",
+            "text_style": "body"
+          }
+        },
+        "buttons_z6hHhy": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "SHOP",
+            "button_link_2": "shopify:\/\/collections\/all",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_KfRGtq",
+        "text_k6hQPR",
+        "buttons_z6hHhy"
+      ],
+      "custom_css": [
+        ".banner__media {left: 0; width: 100%;}",
+        ".banner__heading {color: rgb(255 255 255); text-align: left; line-height: 1.4; font-size: 28px; font-weight: 500;}",
+        ".banner__text {color: rgb(255 255 255); line-height: 1.7; font-size: 18px; font-weight: 500;}",
+        ".button--primary {font-size: 15px; letter-spacing: 1.7px; cursor: pointer;}",
+        ".banner__box {padding-bottom: 12rem;}",
+        "@media (max-width: 750px) {.banner__box {text-align: center; background: none; } .banner__heading {margin-bottom: 5px; } .banner__text {padding-bottom: 5px; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/free-photo-of-young-woman-in-a-traditional-pink-saree-dress-posing-outside.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "bottom-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-2",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "image_hotspot_rihcGL": {
+      "type": "image-hotspot",
+      "custom_css": [
+        ".swiper-pagination-bullets.swiper-pagination-horizontal {top: 89% !important;}",
+        ".image-hotspot__product-title {padding-top: 10px;}",
+        ".image-hotspot-wrapper {padding-bottom: 40px;}"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "button_label": "VIEW PRODUCT",
+        "button_url": "\/"
+      }
+    },
+    "doubleimage_text_RKWreL": {
+      "type": "doubleimage-text",
+      "blocks": {
+        "text_wAFGzh": {
+          "type": "text",
+          "settings": {
+            "heading": "Contact Us",
+            "image_heading": "Ritika Singh X Divas Mantra",
+            "image_description": "COLLABORATION",
+            "image_para": "Divas Mantra brought Ritika Singh's vision to life through the design of her ideal earrings. From the meticulously chosen Kundan stones to the exquisitely molded metal, every detail reflects a thoughtful approach, perfectly aligned with her minimalist and elegant aesthetic.",
+            "button_heading": "DISCOVER",
+            "read_button": "SHOP LOOK",
+            "button_label": "DISCOVER",
+            "button_url": "\/"
+          }
+        }
+      },
+      "block_order": [
+        "text_wAFGzh"
+      ],
+      "custom_css": [
+        "h5 {font-weight: 600; padding-bottom: 0px; margin-bottom: 10px;}",
+        ".img-description {padding-left: 6px; font-size: 18px;}",
+        "@media (max-width: 990px) {.container {padding-left: 0px !important; } .multiple-image {padding-inline: 0px !important; } .j-button-j {display: flex; flex-direction: column; gap: 20px; } .image-lable_btn {padding-right: 0px !important; }}"
+      ],
+      "settings": {
+      }
+    },
+    "gallery_section_9LaeNh": {
+      "type": "gallery-section",
+      "blocks": {
+        "testimonial_7ffeQ7": {
+          "type": "testimonial",
+          "settings": {
+            "text": "Fashion pieces that evoke the essence of autumn ",
+            "logo": "shopify:\/\/shop_images\/Travel_Leisure.webp"
+          }
+        },
+        "testimonial_j67im7": {
+          "type": "testimonial",
+          "settings": {
+            "text": "The elegant pieces are sure to make a statement even after the festivities are concluded",
+            "logo": "shopify:\/\/shop_images\/elle_400x400_new.webp"
+          }
+        },
+        "testimonial_6dY6r8": {
+          "type": "testimonial",
+          "settings": {
+            "text": "Treat yourself to Divas Mantra’s limited - edition silver jewellery collection HUE",
+            "logo": "shopify:\/\/shop_images\/NIE_400x400_a5d8e609-04de-4a93-90ce-5ca9d428d0cf.webp"
+          }
+        },
+        "testimonial_pEBhx8": {
+          "type": "testimonial",
+          "settings": {
+            "text": "Elegant silver jewellery pieces to add glitter to your celebrations",
+            "logo": "shopify:\/\/shop_images\/femina_logo_400x400_104fd505-2ef8-40b6-aaf9-617a32c9559d.webp"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_7ffeQ7",
+        "testimonial_j67im7",
+        "testimonial_6dY6r8",
+        "testimonial_pEBhx8"
+      ],
+      "custom_css": [
+        ".testimonials__image-container {padding-bottom: 0px; padding-top: 0px;}"
+      ],
+      "settings": {
+        "color_scheme": ""
+      }
+    },
+    "image_with_text_b4VfLg": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_c4QhM8": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em>The Experience Store<\/em>",
+            "heading_size": "h1"
+          }
+        },
+        "text_Tat9h4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>CHENNAI<\/p><p>Velachery, Chennai, Tamil Nadu 600042<\/p><p>Mon - Sat, 9:30am - 8:30pm<br\/>Sunday Closed<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_xbCbg4": {
+          "type": "button",
+          "settings": {
+            "button_label": "BOOK AN APPOINTMENT",
+            "button_link": "shopify:\/\/pages\/contact",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_c4QhM8",
+        "text_Tat9h4",
+        "button_xbCbg4"
+      ],
+      "custom_css": [
+        ".image-with-text__heading {font-size: 28px; font-weight: 600;}",
+        ".image-with-text__content {padding-left: 10px;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/home_page_-_store_1.webp",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "zoom-in",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_blog_J7FjnX": {
+      "type": "featured-blog",
+      "custom_css": [
+        ".title-wrapper-with-link {display: block; text-align: center !important;}",
+        "h2 {font-size: 28px; font-weight: 600;}",
+        ".j-btn {display: inline-flex; justify-content: center; align-items: center; border: 0; padding: 0 3rem; cursor: pointer; font: inherit; font-size: 1.5rem; text-decoration: none; -webkit-appearance: none; color: #1c1c1c; text-decoration: underline; margin-left: -200px;}",
+        ".article-card .card__heading {font-weight: 700;}",
+        ".section-template--15503412265059__featured_blog_J7FjnX-padding {border-top: 1px solid rgb(221 215 210);}"
+      ],
+      "settings": {
+        "heading": "<em>Our Journal                                                                 <\/em>",
+        "heading_size": "h1",
+        "blog": "news",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "category_1": "Cotton Saree",
+        "category_2": "Pattu Saree",
+        "category_3": "Silk Saree",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "button_label": "",
+        "button_url": "\/",
+        "show_button": true
+      }
+    },
+    "multicolumn_DinLib": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_wRDwf3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/jewel.png",
+            "title": "PURE STERLING SILVER",
+            "text": "<p>Tested & Stamped<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Wi3mTt": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/clock.png",
+            "title": "LIFETIME EXCHANGE POLICY",
+            "text": "<p>Exchange your old jewellery for 50% value*<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_h48xUL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/kerchief.png",
+            "title": "ONE YEAR ASSURED WARRANTY",
+            "text": "<p>Shhh!! We’ve got you covered*<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_xPN9Vq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/plane.png",
+            "title": "SHIPPING AROUND THE GLOBE",
+            "text": "<p>Free Shipping within India<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_wRDwf3",
+        "column_Wi3mTt",
+        "column_h48xUL",
+        "column_xPN9Vq"
+      ],
+      "custom_css": [
+        ".multicolumn {border-bottom: 1px solid rgb(221 215 210); border-top: 1px solid rgb(221 215 210);}",
+        ".multicolumn-card {background: none;}",
+        ".multicolumn-card .media {padding: 40px !important;}",
+        ".multicolumn-card__image-wrapper img {max-width: 64px; height: auto; right: 0; margin: auto;}",
+        ".multicolumn-card__info {text-align: center; padding: 10px 20px 0px 20px;}",
+        ".multicolumn-card__info .inline-richtext {font-size: 16px; text-align: center; font-weight: 600;}",
+        ".multicolumn-card__info p {font-size: 15px !important;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "third",
+        "image_ratio": "circle",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "silder_banner_image_7G4jGz",
+    "collection_tab_section_Fe66wp",
+    "image_section_KDVc3B",
+    "silder_collection_pro_xEXy4i",
+    "image_banner_UDUbwe",
+    "image_hotspot_rihcGL",
+    "doubleimage_text_RKWreL",
+    "gallery_section_9LaeNh",
+    "image_with_text_b4VfLg",
+    "featured_blog_J7FjnX",
+    "multicolumn_DinLib"
+  ]
+}

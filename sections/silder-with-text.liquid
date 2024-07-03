@@ -1,0 +1,488 @@
+{% stylesheet %}
+.shop-now .shopify-section--header{
+    display:none !important;
+}
+.slider_with_form__container{
+    position:relative;
+    margin-top:68px;
+}
+.slider_desc__cont{
+    max-width:540px;
+    margin-left:280px;
+    margin-top:100px;
+    margin-bottom:100px;
+}
+.slider_desc__hdr{
+    font-size:60px;
+    line-height:65px;
+    color: #FFFFFF;
+    font-family: "Bauer Bodoni",serif;
+    margin-bottom:16px;
+}
+.slider_desc__cntnt{
+    font-size:18px;
+    line-height:22px;
+    letter-spacing:0.18px;
+    color: #FFFFFF;
+    font-family: 'Assistant', sans-serif;
+}
+.slider__bg{
+    background-size:cover;
+    background-repeat:no-repeat;
+    padding-top:700px;
+    padding-bottom:300px;
+}
+.slider__bg.desktop{
+  display:block;
+}
+.slider__bg.mobile {
+  display: none;
+}
+.form__wrapper{
+    border-radius: 10px;
+    background-color: #f3f3f9;
+    max-width:500px;
+    padding:20px 40px 20px 40px;
+    margin:auto;
+}
+
+.form__wrapper form input,.form__wrapper form textarea{
+    box-sizing: border-box !important;
+}
+.slider__cta {
+    margin-top:25px;
+}
+.slider__cta button{
+    position:relative;
+    display: inline-block;
+    font-family: 'Assistant', sans-serif;
+    background-color: white;
+    border: none;
+    color: gray;
+    font-size:12px;
+    line-height:16px;
+    text-transform:uppercase;
+    border-radius:25px;
+    padding-top: 12px;
+    padding-bottom:12px;
+    width: 190px;
+    transition: all 0.5s;
+    cursor: pointer;
+    transition: 0.5s;
+    box-sizing: border-box !important;
+    text-align:center;
+}
+.slider__cta button:after{
+    content: "\2192";
+    position: absolute;
+    opacity: 0;
+    top: 15x;
+    right: 42px;
+    transition: 0.5s;
+}
+.slider__cta button:active{
+    outline:none;
+}
+.slider__cta button:hover{
+    padding-right: 24px;
+    padding-left:8px;
+}
+.slider__cta button:hover::after,
+.slider__cta button:focus::after,
+.slider__cta button:active::after{
+    opacity: 1;
+
+}
+.formModal__cont{
+    border-radius:10px;
+    background-color: #f3f3f9;
+}
+#formModal .modal-content{
+    background:#f3f3f9;
+}
+.slider__swiper-pagination{
+    position: absolute;
+    z-index: 100000;
+    right: 0px;
+    transform: rotate(90deg);
+    max-width:100px;
+    left:initial !important;
+    bottom:14% !important;
+}
+.slider__swiper-pagination .swiper-pagination-bullet-active{
+    background:#fff !important;
+}
+.slider__swiper-pagination .swiper-pagination-bullet{
+    background: transparent;
+    border: 1px solid #fff;
+    opacity: 1;
+    width:13px;
+    height:13px;
+}
+.frm_bill_brd__mdl {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 30px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+.frm_bill_brd__mdl .modal-content {
+    background-color: #f3f3f9;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width:400px;
+}
+.frm_bill_brd__mdl .form__wrapper{
+    padding: 20px 0px !important;
+}
+
+.cstm_hdr__cont{
+    background:#fff;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left:0px;
+    right:0px;
+    transition: top 0.2s ease-in-out;
+    z-index:10000001;
+}
+.cstm_hdr__logo_cont{
+    text-align:center;
+    position:relative;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.cstm_hdr__logo_cont a {
+    font-family: 'Assistant', sans-serif;
+    background: #877063;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    border-radius: 25px;
+    letter-spacing: 1.4px;
+    color: #FFFFFF;
+    border: 0px;
+    padding: 12px;
+    width: 190px !important;
+    transition: all 0.5s;
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative;
+    display: inline-block;
+    position: absolute;
+    right: 100px;
+    top:15px;
+}
+.cstm_hdr__logo_cont a:after {
+    content: "\2192";
+    position: absolute;
+    opacity: 0;
+    top: 12px;
+    right: 30px;
+    transition: 0.5s;
+}
+.cstm_hdr__logo_cont a:active{
+    outline:none;
+}
+.cstm_hdr__logo_cont a:hover{
+    padding-right: 24px;
+    padding-left:8px;
+}
+.cstm_hdr__logo_cont a:hover::after,.cstm_hdr__logo_cont a:focus::after,.cstm_hdr__logo_cont a:active::after{
+    opacity: 1;
+    right: 30px;
+}
+.slider_desc__cont_wrapper{
+    display:flex;
+    align-items:end;
+    position:absolute;
+    width:100%;
+    bottom:60px;
+}
+.slider_desc__cont{
+    flex-basis:70%
+}
+.nav-up {
+    top: -73px;
+}
+.form__wrapper #form{
+    display:flex;
+    flex-wrap:wrap
+}
+.form__wrapper .custom-form-grid .custom-column.custom-col-6-desk{
+    width: calc(50% - 7px);
+
+}
+.form__wrapper .custom-form-grid .custom-column.custom-col-12-desk{
+    width: calc(100% - 7px);
+}
+.form__wrapper .custom-column{
+    margin-left: 3.5px;
+    margin-right: 3.5px;
+}
+.form__wrapper input[type="text"],.form__wrapper input[type="email"],.form__wrapper input[type="tel"],.form__wrapper select{
+    height:45px !important;
+    border: 0px;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 0;
+    padding-left:1em;
+    padding-right:1em;
+    background:#fff !important;
+}
+.form__wrapper .contact-form__block .h1_form_shop,.form__wrapper .contact-form__block .p_form_shop{
+    text-align:center;
+}
+.form__wrapper  .form-submit-warning{
+    font-size:12px;
+    line-height:20px;
+}
+.form__wrapper textarea{
+    border:0px;
+}
+.form__wrapper .btn_sub{
+
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+}
+.g-recaptcha{
+    transform:scale(0.77);
+    transform-origin:0 0;
+}
+@keyframes slideInUp {
+    from {
+        transform: translate3d(0, 100%, 0);
+        visibility: visible;
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+.slideInUp {
+    animation: slideInUp 0.8s;
+}
+
+@media (min-width: 1100px) and (max-width: 1500px) {
+    .slider_desc__cont{
+        margin-left:120px;
+        max-width:400px;
+    }
+    .slider_desc__hdr{
+        font-size:45px;
+        line-height:50px;
+    }
+    .slider_desc__cntnt{
+        font-size:16px;
+        line-height:21px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .cstm_hdr__logo_cont a{
+        display:none;
+    }
+
+    .form__wrapper{
+        display:none !important;
+    }
+    .form__mdl_wrapper{
+        display:block !important;
+    }
+    .slider__cta button{
+        display:block;
+    }
+    .slider_desc__cont{
+        max-width:none !important;
+        margin-left:0px;
+        margin:30px;
+    }
+    .slider__bg{
+        padding-top:400px;
+        padding-bottom:200px;
+    }
+    .cstm_hdr__cta_cont{
+        display:none;
+    }
+    .cstm_hdr__logo_cont svg{
+        max-width:190px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .slider_with_form__container .swiper-slide:nth-child(3) .slider__bg{
+        background-position:bottom;
+    }
+    .slider__bg.desktop{
+      display:none;
+    }
+    .slider__bg.mobile {
+      display: block;
+    }
+}
+
+{% endstylesheet %}
+<div class="cstm_hdr__cont">
+    <div class="cstm_hdr__logo_cont">
+        {{section.settings.logo_image_svg}}
+        <a href="{{ section.settings.hdr_cta_link }}" target="_blank"><span>Contact Us</span></a>
+    </div>
+</div>
+
+<div class="slider_with_form__container page-width">
+    <div class="slider__container page-width">
+        <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+            <div class="swiper-slide">
+                <div class="slider__bg desktop"
+                    style="background-image:url('{{block.settings.slide_image |  img_url : 'master'}}');">
+                </div>
+                
+                <div class="slider__bg mobile"
+                    style="background-image:url('{{block.settings.slide_image_mobile |  img_url : 'master'}}');">
+                </div>
+            </div>
+            {% endfor %}
+            <div class="slider_desc__cont_wrapper">
+                <div class="slider_desc__cont slideInUp">
+                    <div class="slider_desc__hdr">{{section.settings.slide_hdr}}</div>
+                    <div class="slider_desc__cntnt">{{section.settings.slide_desc}}</div>
+                    <div class="slider__cta">
+                        <button><span>Contact Us</span></button>
+                    </div>
+                </div>
+
+                {% if section.settings.show_lead_frm == true%}
+                    <div class="form__wrapper">
+                        {%- render 'shop-now-lead-form' -%}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        <div class="slider__swiper-pagination"></div>
+    </div>
+</div>
+
+<!-- form modal for mobile devices -->
+
+<div id="frm_bill_brd__mdl" class="frm_bill_brd__mdl">
+    <div class="modal-content">
+        <div class="form__wrapper form__mdl_wrapper">
+            {%- render 'shop-now-lead-form' -%}
+        </div>
+    </div>
+</div>
+{% schema %}
+{
+    "name":"Slider with form",
+    "settings": [
+        {
+            "type": "html",
+            "id": "logo_image_svg",
+            "label": "Logo Image"
+        },
+        {
+            "type": "text",
+            "id": "slide_hdr",
+            "label": "slide header",
+            "default": "WE MAKE BRANDS SMELL AMAZING"
+        },
+        {
+            "type": "textarea",
+            "id": "slide_desc",
+            "label": "slide description",
+            "default": "Meet the interactive Kiosk, a powerfull branding tool designed to increase foot traffic, build brand awareness and increase the intent to purchase with memorable experience"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_lead_frm",
+            "label": "Show lead form",
+            "default": true
+        },
+        {
+            "type": "url",
+            "id": "hdr_cta_link",
+            "label": "Header CTA link"
+        }
+    ] ,
+    "blocks":[
+        {
+            "type": "section",
+            "name":"slider",
+            "settings":[
+                {
+                    "type": "image_picker",
+                    "id": "slide_image",
+                    "label": "slide image"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "slide_image_mobile",
+                    "label": "slide image mobile"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+        "name": "Slider with form",
+        "category": "Slider"
+        }
+    ]
+}
+{% endschema %}
+
+<script>
+const swiper = new Swiper('.slider__container', {
+    // Optional parameters
+    direction: 'horizontal',
+    autoplay: {
+        delay: 2000,
+    },
+    effect: 'fade',
+    pagination: {
+        el: '.slider__swiper-pagination',
+        clickable:true
+    }
+});
+(function($){
+    $(function(){
+        var page_name = "{{ page_title | handle }}";
+        if(page_name != "shop-now"){
+            $('.slider__cta button').click(function(){
+                window.location.href = "/pages/contact-us";
+            })
+        }
+        else{
+            var modal = document.getElementById('frm_bill_brd__mdl');
+            $('.slider__cta button').click(function(){
+                $('#frm_bill_brd__mdl').css('display','block');
+            })
+            $(window).click(function(e) {
+                if (e.target == modal) {
+                    $('#frm_bill_brd__mdl').css('display','none');
+                }
+            })
+        }
+    });
+    var lastScrollTop = 0;
+    var header = $('.cstm_hdr__cont').outerHeight();
+    $(window).scroll(function() {
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop){
+            $('.cstm_hdr__cont').removeClass('nav-down').addClass('nav-up');
+        } else {
+            $('.cstm_hdr__cont').removeClass('nav-up').addClass('nav-down');
+        }
+        lastScrollTop = st;
+    });
+})(jQuery);
+</script>

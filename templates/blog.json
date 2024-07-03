@@ -1,0 +1,190 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog",
+      "disabled": true,
+      "settings": {
+        "layout": "grid",
+        "show_image": true,
+        "image_height": "medium",
+        "show_date": true,
+        "show_author": false,
+        "category_1": "Cotton Saree",
+        "category_2": "Pattu Saree",
+        "category_3": "Silk Saree",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "custom_liquid_AAkzWD": {
+      "type": "custom-liquid",
+      "custom_css": [
+
+      ],
+      "settings": {
+        "custom_liquid": "<h2>Our Journal<\/h2>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_banner_8t7VCx": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_8pdfQC": {
+          "type": "heading",
+          "settings": {
+            "heading": "Wedding Saree",
+            "heading_size": "h1"
+          }
+        },
+        "buttons_8iQErG": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "READ MORE",
+            "button_link_2": "shopify:\/\/blogs\/news\/wedding-saree",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_8pdfQC",
+        "buttons_8iQErG"
+      ],
+      "custom_css": [
+        ".button--primary {font-size: 15px; letter-spacing: 1.7px; cursor: pointer;}",
+        ".banner__box {padding-bottom: 6rem; min-width: 31rem;}",
+        "@media (max-width: 750px) {.banner__media {left: 0; width: 100%; } .banner__box {text-align: center; background: none; padding-top: 80%; min-width: 31rem !important; } .banner__heading {margin-bottom: 5px; } .banner__text {padding-bottom: 5px; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/19357-pattu-sarees-for-wedding-chocolate-box-photography-opulence-at-its-best.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "bottom-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "featured_blog_T8HtbB": {
+      "type": "featured-blog",
+      "custom_css": [
+        ".title-wrapper-with-link {display: block; text-align: center !important;}",
+        "h2 {font-size: 28px; font-weight: 600;}",
+        ".article-card .card__heading {font-weight: 700;}",
+        ".section-template--15503412265059__featured_blog_J7FjnX-padding {border-top: 1px solid rgb(221 215 210);}",
+        "@media screen and (max-width: 750px) {.j-btn {margin-left: -223px !important; }}"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "blog": "news",
+        "post_limit": 9,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": false,
+        "category_1": "Cotton Saree",
+        "category_2": "Pattu Saree",
+        "category_3": "Silk Saree",
+        "padding_top": 0,
+        "padding_bottom": 16,
+        "button_label": "Read More",
+        "button_url": "\/",
+        "show_button": true
+      }
+    },
+    "multicolumn_htYDMm": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_KeLVnn": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/jewel.png",
+            "title": "PURE STERLING SILVER",
+            "text": "<p>Tested & Stamped<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_fBDxcH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/clock.png",
+            "title": "LIFETIME EXCHANGE POLICY",
+            "text": "<p>Exchange your old jewellery for 50% value*<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_JLeedC": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/kerchief.png",
+            "title": "ONE YEAR ASSURED WARRANTY",
+            "text": "<p>Shhh!! We’ve got you covered*<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_JMYj8D": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/plane.png",
+            "title": "SHIPPING AROUND THE GLOBE",
+            "text": "<p>Free Shipping within India<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_KeLVnn",
+        "column_fBDxcH",
+        "column_JLeedC",
+        "column_JMYj8D"
+      ],
+      "custom_css": [
+        ".multicolumn {border-bottom: 1px solid rgb(221 215 210); border-top: 1px solid rgb(221 215 210);}",
+        ".multicolumn-card {background: none;}",
+        ".multicolumn-card .media {padding: 40px !important;}",
+        ".multicolumn-card__image-wrapper img {max-width: 64px; height: auto; right: 0; margin: auto;}",
+        ".multicolumn-card__info {text-align: center; padding: 10px 20px 0px 20px;}",
+        ".multicolumn-card__info .inline-richtext {font-size: 16px; text-align: center; font-weight: 600;}",
+        ".multicolumn-card__info p {font-size: 15px !important;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "circle",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_AAkzWD",
+    "image_banner_8t7VCx",
+    "featured_blog_T8HtbB",
+    "multicolumn_htYDMm"
+  ]
+}

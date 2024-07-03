@@ -1,0 +1,48 @@
+{
+  "parent": "index.json",
+  "context": {
+    "market": "international"
+  },
+  "sections": {
+    "collage_7HkFP": {
+      "type": "collage",
+      "disabled": false,
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "header-6f97b469a78cb971106e94f1a7dea8b8": null,
+        "padding_top": 36,
+        "padding_bottom": 36
+      },
+      "blocks": {
+        "image_KWfy4": {
+          "type": "image",
+          "disabled": false,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/7.jpg"
+          }
+        },
+        "product_A4CQH": {
+          "type": "product",
+          "disabled": false,
+          "settings": {
+            "product": "parrot-rich-cotton-jacquard-silk-zari-weaving-saree",
+            "second_image": false
+          }
+        }
+      },
+      "block_order": [
+        "image_KWfy4",
+        "product_A4CQH"
+      ]
+    }
+  },
+  "order": [
+    "image_banner_UDUbwe",
+    "collage_7HkFP"
+  ]
+}

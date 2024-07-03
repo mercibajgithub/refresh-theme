@@ -1,0 +1,179 @@
+
+{%- style -%}
+  .collection-slider-wrapper{
+    padding: 0px 30px 40px 30px;
+  }
+  .collection-slider-inner .swiper-wrapper{
+    height: auto !important;
+    padding-bottom: 40px;
+    overflow: unset !important;
+  }
+  .collection-slider-inner{
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+  .collection-slider__btn{
+    text-align: center;
+  }
+  .collection__product-image{
+    max-height: 320px;
+  }
+  .collection__product-link{
+    text-align: center;
+    text-decoration: none;
+  }
+  .collection__product-title, collection__product-price{
+    font-size: 15px;
+    color: #1C1C1C;
+  }
+  .collection__product-title{
+    font-weight: 600;
+  }
+  .collection__product-price{
+    color: #1C1C1CA6;
+  }
+  .collection-slider-wrapper .swiper-button-next, .collection-slider-wrapper .swiper-button-prev{
+    display: block;
+    background: #ffffff;
+    width: 44px;
+    height: 44px;
+    border-radius: 100%;
+  }
+  .collection-slider-wrapper .swiper-button-next::after, .collection-slider-wrapper .swiper-button-prev::after{
+    font-size: 12px;
+    color: #1C1C1C !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .collections-tab__section-title {
+  padding-top: 10px !important;
+  font-weight: 500;
+  font-size: 28px;
+  font-family: "ITC Berkeley Oldstyle Std", serif;
+  font-style: italic;
+}
+.collection__tab-para{
+     font-size: 18px;
+    font-weight: 500;
+    line-height: 1.7;
+    text-align: center;
+      font-family: "ITC Berkeley Oldstyle Std", serif;
+}
+.collection-swiper-silder{
+  img {
+    height: 300px;
+  }
+}
+  @media only screen and (max-width: 750px) {
+    .collection-slider-wrapper .swiper-button-next, .collection-slider-wrapper .swiper-button-prev{
+      width: 35px;
+      height: 35px;
+    }
+    .collection-slider-wrapper .swiper-button-next::after, .collection-slider-wrapper .swiper-button-prev::after{
+      font-size: 9px;
+    }
+  }
+{%- endstyle -%}
+
+{% if section.settings.featured_collection %}
+  {% assign collection_handle = section.settings.featured_collection %}
+  {% assign collection = collections[collection_handle] %}
+  <div class="collection-slider-wrapper color-{{ section.settings.color_scheme }}">
+  <h2 class="collections-tab__section-title">Featured Collection</h2>
+  <h6 class="collection__tab-para">Our Finest Jewels Await You</h6>
+    <div class="swiper collection-slider-inner">
+      <div class="swiper-wrapper">
+        {% for product in collection.products %}
+          <div class="swiper-slide collection-swiper-silder">
+            <a href="{{ product.url }}" class="collection__product-link">
+              <img
+                src="{{ product.featured_image | image_url }}"
+                alt="{{ product.title }}"
+                class="collection__product-image"
+              >
+              <div class="collection__product-title">{{ product.title }}</div>
+              <div class="collection__product-price">{{ product.price | money }}</div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+    <div class="collection-slider__btn">
+      <a href="{{ section.settings.collection_link }}" class="button button--brown  button--primary">
+        <span>{{ section.settings.collection_button_text }}</span>
+      </a>
+    </div>
+  </div>
+{% else %}
+  <p>No collection selected.</p>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Collection Slider",
+  "class": "collection-slider",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "scheme-2",
+      "label": "Color Scheme"
+    },
+    {
+      "type": "collection",
+      "id": "featured_collection",
+      "label": "Collection"
+    },
+    {
+      "type": "text",
+      "id": "collection_button_text",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "collection_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Slider",
+      "category": "collection-slider"
+    }
+  ]
+}
+{% endschema %}
+
+{% javascript %}
+  document.addEventListener('DOMContentLoaded', function() {
+    const collection_slider = new Swiper('.swiper.collection-slider-inner', {
+      direction: 'horizontal',
+      loop: true,
+      spaceBetween: 25,
+      speed: 1000,
+      autoplay: false,
+      allowTouchMove: true,
+      pagination: false,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      allowSlideNext: true,
+      allowSlidePrev: true,
+      breakpoints: {
+        750: {
+          slidesPerView: 1,
+        },
+        751: {
+          slidesPerView: 4,
+        },
+      },
+    });
+
+  })
+{% endjavascript %}

@@ -1,0 +1,109 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "featured_image": {
+          "type": "featured_image",
+          "settings": {
+            "image_height": "medium"
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "featured_image",
+        "content"
+      ],
+      "custom_css": [
+        ".article-template__content {width: 900px; margin: auto; background: rgb(255 248 242 \/ 1); margin-top: -5%; padding: 40px 50px 20px 50px;}"
+      ],
+      "settings": {
+      }
+    },
+    "multicolumn_CAQwyR": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_QDHwbM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/jewel.png",
+            "title": "PURE STERLING SILVER",
+            "text": "<p>Tested & Stamped<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_qQ9VaE": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/clock.png",
+            "title": "LIFETIME EXCHANGE POLICY",
+            "text": "<p>Exchange your old jewellery for 50% value*<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_HaYbgF": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/kerchief.png",
+            "title": "ONE YEAR ASSURED WARRANTY",
+            "text": "<p>Shhh!! We’ve got you covered*<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ibnzMg": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/plane.png",
+            "title": "SHIPPING AROUND THE GLOBE",
+            "text": "<p>Free Shipping within India<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_QDHwbM",
+        "column_qQ9VaE",
+        "column_HaYbgF",
+        "column_ibnzMg"
+      ],
+      "custom_css": [
+        ".multicolumn {border-bottom: 1px solid rgb(221 215 210); border-top: 1px solid rgb(221 215 210);}",
+        ".multicolumn-card {background: none;}",
+        ".multicolumn-card .media {padding: 40px !important;}",
+        ".multicolumn-card__image-wrapper img {max-width: 64px; height: auto; right: 0; margin: auto;}",
+        ".multicolumn-card__info {text-align: center; padding: 10px 20px 0px 20px;}",
+        ".multicolumn-card__info .inline-richtext {font-size: 16px; text-align: center; font-weight: 600;}",
+        ".multicolumn-card__info p {font-size: 15px !important;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "circle",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "multicolumn_CAQwyR"
+  ]
+}

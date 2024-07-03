@@ -1,0 +1,380 @@
+
+{%- style -%}
+.collections-tab-wrapper {
+  padding: 0 30px 40px;
+  padding-bottom: 40px; /* corrected padding */
+}
+
+.collections-tab__section-title {
+  text-align: center;
+ padding-top: 10px !important;
+  font-weight: 500;
+  font-size: 28px;
+  font-family: "ITC Berkeley Oldstyle Std", serif;
+  font-style: italic;
+}
+
+.collections-tab-button-wrapper {
+  text-align: center;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+ padding: 0px 50px 50px 50px;
+}
+
+.collections-tab__content-wrapper.display-none {
+  display: none;
+}
+
+.collections-tab-button-wrapper button {
+  background-color: unset;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+ font-family: "ITC Berkeley Oldstyle Std", serif;
+  font-size: 18px !important;
+  line-height: 1.7;
+  font-weight: 500;
+  letter-spacing: 1.3;
+  position: relative;
+}
+
+.collections-tab-button-wrapper button::after {
+  content: '';
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  height: 1px;
+  background: #1C1C1C;
+  width: 0;
+  transition: all 0.3s ease;
+}
+
+.collections-tab-button-wrapper button.active::after {
+  width: 100%;
+}
+
+.collections-tab-1-inner .swiper-container,
+.collections-tab-2-inner .swiper-container {
+  height: auto !important;
+  padding-bottom: 40px;
+  overflow: hidden !important;
+}
+
+.collections-tab-1-inner,
+.collections-tab-2-inner {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.collection__product-image {
+  max-height: 320px;
+}
+
+.collection__product-link {
+  text-align: center;
+  text-decoration: none;
+}
+
+.collection__product-title,
+.collection__product-price {
+  font-size: 15px;
+  color: #1C1C1C;
+}
+
+.collection__product-title {
+  font-weight: 600;
+  font-family: "ITC Berkeley Oldstyle Std", serif;
+}
+
+.collection__product-price {
+  color: #1C1C1CA6;
+}
+
+.collections-tab__content-wrapper .swiper-button-next,
+.collections-tab__content-wrapper .swiper-button-prev {
+  display: block;
+  background: #ffffff;
+  width: 44px;
+  height: 44px;
+  border-radius: 100%;
+}
+
+.collections-tab__content-wrapper .swiper-button-next::after,
+.collections-tab__content-wrapper .swiper-button-prev::after {
+  font-size: 12px;
+  color: #1C1C1C !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.collections-tab__btn{
+  display:none;
+}
+
+.collecion-tab__shop-btn{
+  text-align:center;
+}
+@media only screen and (max-width: 750px) {
+  .collections-tab__content-wrapper .swiper-button-next,
+  .collections-tab__content-wrapper .swiper-button-prev {
+    width: 35px;
+    height: 35px;
+  }
+
+  .collections-tab__content-wrapper .swiper-button-next::after,
+  .collections-tab__content-wrapper .swiper-button-prev::after {
+    font-size: 9px;
+  }
+}
+{%- endstyle -%}
+
+<div class="collections-tab-wrapper color-{{ section.settings.color_scheme }}">
+  <h2 class="collections-tab__section-title">{{ section.settings.collection_tab_sec_heading }}</h2>
+  <div class="collections-tab-button-wrapper">
+    {% if section.settings.collection_1 %}
+      {% assign collection_handle = section.settings.collection_1 %}
+      {% assign collection = collections[collection_handle] %}
+      <button class="collections-tab__button active" id="collections_tab__button_1">{{ collection.title }}</button>
+    {% endif %}
+
+    {% if section.settings.collection_2 %}
+      {% assign collection_handle = section.settings.collection_2 %}
+      {% assign collection = collections[collection_handle] %}
+      <button class="collections-tab__button" id="collections_tab__button_2">{{ collection.title }}</button>
+    {% endif %}
+  </div>
+  {% if section.settings.collection_1 %}
+    {% assign collection_handle = section.settings.collection_1 %}
+    {% assign collection = collections[collection_handle] %}
+    <div class="collections-tab__content-wrapper display-none" id="collections_tab_1">
+      <div class="swiper collections-tab-1-inner">
+        <div class="swiper-wrapper">
+          {% for product in collection.products %}
+            <div class="swiper-slide">
+              <a href="{{ product.url }}" class="collection__product-link">
+                <img src="{{ product.featured_image | image_url }}" alt="{{ product.title }}" class="collection__product-image">
+                <div class="collection__product-title">{{ product.title }}</div>
+                <div class="collection__product-price">{{ product.price | money }}</div>
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="swiper-button-next collections-tab-1"></div>
+        <div class="swiper-button-prev collections-tab-1"></div>
+      </div>
+      <div class="collections-tab__btn">
+        <a href="{{ section.settings.collection_1_link }}" class="button button--brown button--primary">
+          <span>{{ section.settings.collection_1_button_text }}</span>
+        </a>
+      </div>
+    </div>
+  {% endif %}
+
+  {% if section.settings.collection_2 %}
+    {% assign collection_handle = section.settings.collection_2 %}
+    {% assign collection = collections[collection_handle] %}
+    <div class="collections-tab__content-wrapper display-none" id="collections_tab_2">
+      <div class="swiper collections-tab-2-inner">
+        <div class="swiper-wrapper">
+          {% for product in collection.products %}
+            <div class="swiper-slide">
+              <a href="{{ product.url }}" class="collection__product-link">
+                <img src="{{ product.featured_image | image_url }}" alt="{{ product.title }}" class="collection__product-image">
+                <div class="collection__product-title">{{ product.title }}</div>
+                <div class="collection__product-price">{{ product.price | money }}</div>
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="swiper-button-next collections-tab-2"></div>
+        <div class="swiper-button-prev collections-tab-2"></div>
+      </div>
+      <div class="collections-tab__btn">
+        <a href="{{ section.settings.collection_2_link }}" class="button button--brown button--primary">
+          <span>{{ section.settings.collection_2_button_text }}</span>
+        </a>
+      </div>
+    </div>
+    <div class="collecion-tab__shop-btn">
+    <a
+            href="{{ section.settings.button1_link }}"
+            class="button button--brown  button--primary double-img-with-txt__button--1"
+          >
+            <span>{{ section.settings.button_1 }}</span>
+          </a></div>
+  {% endif %}
+</div>
+
+
+
+{% javascript %}
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize Swiper instances for both tabs
+  const collections_tab_1 = new Swiper('.swiper.collections-tab-1-inner', {
+    direction: 'horizontal',
+    loop: true,
+    spaceBetween: 25,
+    speed: 1000,
+    autoplay: false,
+    allowTouchMove: true,
+    pagination: false,
+    navigation: {
+      nextEl: ".swiper-button-next.collections-tab-1",
+      prevEl: ".swiper-button-prev.collections-tab-1",
+    },
+    allowSlideNext: true,
+    allowSlidePrev: true,
+    breakpoints: {
+      750: {
+        slidesPerView: 1,
+      },
+      751: {
+        slidesPerView: 4,
+      },
+    },
+  });
+
+  const collections_tab_2 = new Swiper('.swiper.collections-tab-2-inner', {
+    direction: 'horizontal',
+    loop: true,
+    spaceBetween: 25,
+    speed: 1000,
+    autoplay: false,
+    allowTouchMove: true,
+    pagination: false,
+    navigation: {
+      nextEl: ".swiper-button-next.collections-tab-2",
+      prevEl: ".swiper-button-prev.collections-tab-2",
+    },
+    allowSlideNext: true,
+    allowSlidePrev: true,
+    breakpoints: {
+      750: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      751: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+    },
+  });
+
+  // Function to switch tabs
+  function switchTab(event) {
+    var tabId = event.target.id; // Get the ID of the clicked button
+    // Remove 'active' class from all tab buttons
+    var tabButtons = document.querySelectorAll('.collections-tab__button');
+    tabButtons.forEach(function(button) {
+      button.classList.remove('active');
+    });
+
+    // Add 'active' class to the clicked tab button
+    event.target.classList.add('active');
+
+    // Hide all tab content wrappers
+    var tabContentWrappers = document.querySelectorAll('.collections-tab__content-wrapper');
+    tabContentWrappers.forEach(function(wrapper) {
+      wrapper.classList.add('display-none');
+    });
+
+    // Show the corresponding tab content wrapper based on clicked tab
+    var tabNumber = tabId.substr(-1);
+    var activeTabContentWrapper = document.getElementById('collections_tab_' + tabNumber);
+    activeTabContentWrapper.classList.remove('display-none');
+
+    // Initialize Swiper again for the active tab
+    if (tabNumber === '1') {
+      collections_tab_1.update(); // Update Swiper for tab 1
+    } else if (tabNumber === '2') {
+      collections_tab_2.update(); // Update Swiper for tab 2
+    }
+  }
+
+  // Add click event listeners to tab buttons
+  var tabButtons = document.querySelectorAll('.collections-tab__button');
+  tabButtons.forEach(function(button) {
+    button.addEventListener('click', switchTab);
+  });
+
+  // Initially, activate the first tab and show its content
+  document.getElementById('collections_tab__button_1').click(); // Simulate a click on the first tab button
+});
+{% endjavascript %}
+
+
+
+
+
+
+
+
+
+{% schema %}
+{
+  "name": "Collections tab",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "scheme-2",
+      "label": "Color Scheme"
+    },
+    {
+      "type": "text",
+      "id": "collection_tab_sec_heading",
+      "label": "Section heading"
+    },
+    {
+      "type": "collection",
+      "id": "collection_1",
+      "label": "Collection 1"
+    },
+    {
+      "type": "text",
+      "id": "collection_1_button_text",
+      "label": "Button 1 Text"
+    },
+    {
+      "type": "url",
+      "id": "collection_1_link",
+      "label": "Button 1 Link"
+    },
+    {
+      "type": "collection",
+      "id": "collection_2",
+      "label": "Collection 2"
+    },
+    {
+      "type": "text",
+      "id": "collection_2_button_text",
+      "label": "Button 2 Text"
+    },
+    {
+      "type": "url",
+      "id": "collection_2_link",
+      "label": "Button 2 Link"
+    },
+    {
+       "type": "text",
+      "id": "button_1",
+      "label": "button 1",
+      "default": "SHOP ALL"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "button URL",
+      "default": "/"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collections tab",
+      "category": "collections-tab"
+    }
+  ]
+}
+{% endschema %}
